@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2515e0817d01d47a6284ba5b5bcd9d, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier: 
+  Player:
+    PlayerHealthSettings:
+      Health: 3
+    PlayerMovementSettings:
+      MaxSpeed: 15
+      MinSpeed: 0
+      Acceleration: 8
+      Deceleration: 5
+      ThrottleDeadzone: 0.1
+      RotationDeadzone: 0.1
+    PlayerShootSettings:
+      FireCooldown: 0.25
+      BulletSpeed: 12
+      BulletLifetime: 1
+      EnemyType: 0
+    PlayerVisibilitySettings:
+      RespawnDelay: 1
+      RespawnSafetyCheckDelay: 0.5
+      RespawnSafetyDistance: 1.5
+    PlayerWarpDriveSettings:
+      WarpCooldown: 3
+  Enemy:
+    LargeAsteroidSettings:
+      HealthSettings:
+        AsteroidSizeToSpawn: 1
+        AsteroidsToSpawnAmount: 2
+        ScoreReward: 20
+      MovementSettings:
+        MinSpeed: 1
+        MaxSpeed: 1.5
+    MediumAsteroidSettings:
+      HealthSettings:
+        AsteroidSizeToSpawn: 2
+        AsteroidsToSpawnAmount: 2
+        ScoreReward: 50
+      MovementSettings:
+        MinSpeed: 1.5
+        MaxSpeed: 2.5
+    SmallAsteroidSettings:
+      HealthSettings:
+        AsteroidSizeToSpawn: 2
+        AsteroidsToSpawnAmount: 0
+        ScoreReward: 100
+      MovementSettings:
+        MinSpeed: 3
+        MaxSpeed: 4
+    BigSaucerSettings:
+      HealthSettings:
+        ScoreReward: 200
+      MovementSettings:
+        MinSpeed: 2
+        MaxSpeed: 3.5
+        ChangeDirectionInterval: 4
+      ShootSettings:
+        CircleRadius: 0.85
+        FireCooldown: 1
+        BulletSpeed: 5
+        BulletLifetime: 3
+        EnemyType: 2
+    SmallSaucerSettings:
+      HealthSettings:
+        ScoreReward: 1000
+      MovementSettings:
+        MinSpeed: 2.5
+        MaxSpeed: 4.5
+        ChangeDirectionInterval: 3
+      ShootSettings:
+        CircleRadius: 0.85
+        FireCooldown: 1.5
+        BulletSpeed: 7
+        BulletLifetime: 3
+        EnemyType: 2
+  GameSetup:
+    GameManagerSettings:
+      GameOverRestartDelay: 2
+    WaveManagerSettings:
+      AsteroidStartingCount: 6
+      AsteroidIncrementCount: 1
+      AsteroidIncrementScoreThreshold: 5000
+      SaucerSpawnCheckDelay: 1
+      SaucerSpawnChance: 0.4
+      SmallSaucerSpawnChance: 0.15
+      SaucerSpawnEnemyThreshold: 3
+      WaveDelay: 1
+    ScreenBondarySettings:
+      ColliderWidth: 1
+      SizeMultiplier: 3
+      DistanceFromViewport: 0.5
+    EnemySpawnerSettings:
+      MinDistanceFromPlayer: 2
+      AsteroidSpawnRadius: 0.5
